@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="myaam-email" />
+        <module name="myaam-mail" />
+        <module name="myaam-generator" />
+        <module name="myaam-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="myaam" target="1.8" />
+      <module name="myaam-email" target="1.7" />
+      <module name="myaam-generator" target="1.8" />
+      <module name="myaam-mail" target="1.7" />
+      <module name="myaam-server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="myaam" options="" />
+      <module name="myaam-email" options="-parameters" />
+      <module name="myaam-generator" options="-parameters" />
+      <module name="myaam-mail" options="" />
+      <module name="myaam-server" options="-parameters" />
+    </option>
+  </component>
+</project>

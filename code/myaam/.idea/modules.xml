@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/myaam.iml" filepath="$PROJECT_DIR$/myaam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myaam-email/myaam-email.iml" filepath="$PROJECT_DIR$/myaam-email/myaam-email.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myaam-generator/myaam-generator.iml" filepath="$PROJECT_DIR$/myaam-generator/myaam-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myaam-mail/myaam-mail.iml" filepath="$PROJECT_DIR$/myaam-mail/myaam-mail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myaam-server/myaam-server.iml" filepath="$PROJECT_DIR$/myaam-server/myaam-server.iml" />
+    </modules>
+  </component>
+</project>

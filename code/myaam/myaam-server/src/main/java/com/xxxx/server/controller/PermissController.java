@@ -26,8 +26,12 @@ public class PermissController {
     private IRoleService roleService;
     @Autowired
     private IMenuService menuService;
+
+
     @Autowired
-    private IMenuRoleService menuRoleService;
+    IMenuRoleService menuRoleService;
+
+
     @ApiOperation(value = "获取所有角色")
     @GetMapping("/")
     public List<Role> getAllRoles(){
@@ -57,9 +61,10 @@ public class PermissController {
     public List<Menu> gatAllMenus(){
         return menuService.getAllMenus();
     }
+
     @ApiOperation(value = "根据角色id查询菜单id")
     @GetMapping("/mid/{rid}")
-    private List<Integer> getMidByRid(@PathVariable Integer rid){
+    public List<Integer> getMidByRid(@PathVariable Integer rid){
         return menuRoleService.list(new QueryWrapper<MenuRole>().eq("rid",rid)).stream()
                 .map(MenuRole::getMid).collect(Collectors.toList());
     }

@@ -33,7 +33,6 @@ public class AdminController {
     @GetMapping("/")
     public List<Admin> getAllAdmins(String keywords){
         return adminService.getAllAdmins(keywords);
-
     }
 
     @ApiOperation(value = "更新操作员")

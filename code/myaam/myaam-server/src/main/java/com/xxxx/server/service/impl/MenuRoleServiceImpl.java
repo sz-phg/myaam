@@ -8,7 +8,7 @@ import com.xxxx.server.pojo.RespBean;
 import com.xxxx.server.service.IMenuRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @author chengyulong
  * @since 2022-10-25
  */
-@Service
+@Component
 public class MenuRoleServiceImpl extends ServiceImpl<MenuRoleMapper, MenuRole> implements IMenuRoleService {
     @Autowired
     private MenuRoleMapper menuRoleMapper;
@@ -34,7 +34,7 @@ public class MenuRoleServiceImpl extends ServiceImpl<MenuRoleMapper, MenuRole> i
     @Transactional
     public RespBean updateMenuRole(Integer rid, Integer[] mids) {
         menuRoleMapper.delete(new QueryWrapper<MenuRole>().eq("rid",rid));
-        redisTemplate.delete("menu_"+rid);
+        System.out.println("清理menu_" + rid+"缓存："+redisTemplate.delete("menu_" + rid));
         if(mids==null || 0 == mids.length){
             return RespBean.success("更新成功");
         }

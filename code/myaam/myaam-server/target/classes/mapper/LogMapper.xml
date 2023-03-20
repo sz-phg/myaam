@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxxx.server.mapper.LogMapper">
+    <!--获取所有员工（分页）-->
+    <select id="getLogByPage" resultType="com.xxxx.server.pojo.LogBean">
+        select * from t_log
+    </select>
+
+</mapper>
